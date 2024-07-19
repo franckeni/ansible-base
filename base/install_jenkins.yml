@@ -13,9 +13,9 @@
 
   pre_tasks:
   - name: update all packages 
-    apt:
+    ansible.builtin.apt:
       name: '*'
-      update_only: yes
+      #update_only: yes
       update_cache: yes
       state: latest 
 
