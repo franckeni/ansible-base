@@ -7,7 +7,7 @@
       - openjdk-21-jdk
 
     jenkins_plugins: []
-    
+    docker_install_compose_plugin: true
     pip_install_packages:
       - name: docker
 
