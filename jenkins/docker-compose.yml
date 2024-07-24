@@ -11,11 +11,12 @@ services:
       - '50000:50000'
     privileged: true
     volumes:
-      #- '~/jenkins_data:/bitnami'
+      - jenkins_data:/var/jenkins_home:rw
       - '/var/run/docker.sock:/var/run/docker.sock'
-      - '~/jenkins_home:/var/jenkins_home'
+      #- '~/jenkins_home:/var/jenkins_home'
 volumes:
-  #jenkins_data:
-  #  driver: local
-  jenkins_home:
+  jenkins_data:
     driver: local
+  #jenkins_home:
+  #  driver: local
+  
