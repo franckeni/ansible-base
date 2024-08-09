@@ -3,7 +3,10 @@ version: '3'
 # password: bitnami
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    #image: jenkins/jenkins:lts
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: always
     ports:
       - '8080:8080'
