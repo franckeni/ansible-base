@@ -9,7 +9,7 @@ RUN echo "deb [arch=$(dpkg --print-architecture) \
   $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
 RUN apt-get update && apt-get install -y docker-ce-cli
 RUN apt-get install software-properties-common -y
-RUN add-apt-repository 'ppa:deadsnakes/ppa'
+RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get -y update && sudo apt-get upgrade -y
 RUN apt-get -y install python3.12 python3-pip
 RUN pip3 install ansible --upgrade 
